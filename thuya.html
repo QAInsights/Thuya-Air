@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Thuya - Know your air quality.</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <link rel="stylesheet" href="https://cdn.datatables.net/1.10.15/css/jquery.dataTables.min.css">
+  <link rel="stylesheet" href=".\\resources\\css\\style.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+  <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDqxWpslyGtJgjh0pRGSTbQ20Jw2koULZ8&callback=initMap"
+  type="text/javascript"></script>
+  <script src="http://www.jqueryscript.net/demo/Client-side-HTML-Table-Pagination-Plugin-with-jQuery-Paging/paging.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.js"></script>
+  <script src="https://cdn.datatables.net/1.10.15/js/jquery.dataTables.min.js"></script>
+  <script src=".\\resources\\js\\app.js"></script>
+</head>
+
+<body>
+
+<div class="container">
+<nav class="navbar navbar-default">
+  <div class="container-fluid">
+    <div class="navbar-header">
+      <a class="navbar-brand" href="#">thuya ~ தூ௰</a>
+    </div>
+    <ul class="nav navbar-nav">
+      
+    </ul>
+  </div>
+</nav>
+</div>
+
+<div class="jumbotron jumbotron-fluid">
+  <div class="container">
+    <h1 class="display-3">thuya ~ தூ௰</h1>
+    <p class="lead"><small>know your air quality.</small></p>
+  </div>
+</div>
+
+<div class="container">
+  <h3>What is thuya (தூ௰)?</h3>
+<div class="panel panel-default">
+<p>thuya - தூ௰ means <span class="text-primary"> pure </span> in <a href="https://en.wikipedia.org/wiki/Tamil_language" target="_blank">Tamil language</a>. thuya displays air quality from <span>50 countries, 5000+ locations, 60+ government level and research-grade sources. It uses OpenAQ APIs under the hood.</span></p>
+<p>Read more about <a href="https://medium.com/@openaq/where-does-openaq-data-come-from-a5cf9f3a5c85" target="_blank">Data Disclaimer</a></p>
+</div>
+</div>
+<hr>
+<!-- <div class="container">
+   <input id="city" placeholder="Enter your city name" value="Chennai" width="100%"/>
+   <input id="country" placeholder="Enter your country name" value="IN" width="100%"/>
+   <button type="button" class="btn btn-info" id="getAirQuality" value="Submit"><span><img id="spinner" src="https://www.ethicon.com/sites/all/themes/ethicon/img/ajax-loader.gif" width="20" height="20" style="display:none"></span>SUBMIT</button>
+ </div> -->
+<!-- Auto Populate Country and Cities -->
+<div class="container">
+  <select id="dropdownCountries" style="height: 35px;" >
+    <option value="SelectCountry">
+      Select Country
+    </option>
+  </select>
+  <select id="dropdownCities" style="width: 250px; height: 35px">
+    <option value="SelectCity">
+    </option>
+  </select>
+  <button type="button" class="btn btn-info" id="getAirQuality" value="Submit"><span><img id="spinner" src="https://www.ethicon.com/sites/all/themes/ethicon/img/ajax-loader.gif" width="20" height="20" style="display:none"></span>SUBMIT</button>
+
+</div>
+ 
+<div class="container">
+<div class="container" id="divLocations">
+</div>
+</div>
+
+<div  class="container">
+  <table border="0" cellpadding="0" width="100%" id="tableLocations" class="table table-hover">
+    <thead>
+    <tr>
+      <th id="headerLocation"></th>
+      <th id="headerParameter"></th>
+      <th id="headerValue"></th>
+      <th id="headerUnit"></th>
+      <th id="headerLastUpdated"></th>
+      <th id="headerCoordinates"></th>
+    </tr>
+  </thead>
+        <tbody id="tableLocationsBody">
+        </tbody>
+  </table>
+</div>
+
+<footer class="footer">
+<div class="container text-center">
+  <p class="text-muted credit">Made with <span class="glyphicon glyphicon-heart"></span> from Cincinnati. 
+    Developed by <a href="https://qainsights.com" target="_blank">NaveenKumar Namachivayam</a> 
+    for New Relic's 
+    <a href="https://www.therelicans.com/therelicans/combat-climate-change-and-earn-prizes-with-hack-the-planet-4g5" target="_blank">
+      Hack The Planet</a>
+  </p>
+  <p class="text-muted credit">Powered by <a href="https://docs.openaq.org/" target="_blank">Open AQ</a></p>
+</div>
+<div class="container text-right">
+  <a href ="#" class="scrollToTop">Go to Top</a>
+</div>
+</footer>
+</body>
+</html>
